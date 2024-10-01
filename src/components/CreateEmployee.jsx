@@ -84,7 +84,6 @@ const CreateEmployee = () => {
 
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
-          withCredentials: true,
         }
       );
 

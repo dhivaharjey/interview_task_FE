@@ -54,7 +54,6 @@ const EditEmployee = () => {
 
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            withCredentials: true,
           }
         );
         setFormData(response.data);
@@ -99,7 +98,6 @@ const EditEmployee = () => {
 
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
-          withCredentials: true,
         }
       );
 

@@ -30,6 +30,7 @@ const App = () => {
             <Route path="edit-employee/:id" element={<EditEmployee />} />
           </Route>
         </Routes>
+        <Route path="*" element={<UserLogin />} />
       </Router>
     </>
   );

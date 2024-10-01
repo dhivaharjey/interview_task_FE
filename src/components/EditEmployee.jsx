@@ -47,7 +47,7 @@ const EditEmployee = () => {
     const fetchEmployeeData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/employees/get-employee/${id}`,
+          `https://interview-task-be.onrender.com/employees/get-employee/${id}`,
           {
             headers: {
               "Content-Type": "multipart/form-data",
@@ -91,7 +91,7 @@ const EditEmployee = () => {
       submissionData.append("image", formData.image);
 
       const response = await axios.put(
-        `http://localhost:4000/employees/update-employee/${id}`,
+        `https://interview-task-be.onrender.com/employees/update-employee/${id}`,
         submissionData,
         {
           headers: {

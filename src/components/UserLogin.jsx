@@ -45,10 +45,13 @@ const UserLogin = () => {
     try {
       const { userName, password } = inputData;
 
-      const response = await axios.post(`http://localhost:4000/user/login`, {
-        userName,
-        password,
-      });
+      const response = await axios.post(
+        `https://interview-task-be.onrender.com/user/login`,
+        {
+          userName,
+          password,
+        }
+      );
       console.log(response);
 
       if (response.status == 200) {

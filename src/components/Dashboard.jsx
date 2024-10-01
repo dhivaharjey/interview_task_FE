@@ -12,7 +12,7 @@ const Dashboard = () => {
       const token = localStorage.getItem("token");
       try {
         const response = await axios.get(
-          `http://localhost:4000/user/user-details`,
+          `https://interview-task-be.onrender.com/user/user-details`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

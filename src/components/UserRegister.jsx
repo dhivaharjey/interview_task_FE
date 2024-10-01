@@ -40,11 +40,14 @@ const UserRegister = () => {
     setErrorMsg(null);
     try {
       const { userName, email, password } = inputData;
-      const response = await axios.post(`http://localhost:4000/user/register`, {
-        userName,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `https://interview-task-be.onrender.com:4000/user/register`,
+        {
+          userName,
+          email,
+          password,
+        }
+      );
       if (response) {
         setInputData({});
         toast.success(response?.data?.message);

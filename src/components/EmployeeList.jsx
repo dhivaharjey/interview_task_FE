@@ -29,7 +29,7 @@ const EmployeeList = () => {
     const token = localStorage.getItem("token");
     try {
       const res = await axios.delete(
-        `http://localhost:4000/employees/delete-employee/${id}`,
+        `https://interview-task-be.onrender.com/employees/delete-employee/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@ const EmployeeList = () => {
       const token = localStorage.getItem("token");
       try {
         const response = await axios.get(
-          `http://localhost:4000/employees/get-employee-list`,
+          `https://interview-task-be.onrender.com/employees/get-employee-list`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

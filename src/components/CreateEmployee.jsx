@@ -40,18 +40,6 @@ const CreateEmployee = () => {
   const [errorMsg, setErrorMsg] = useState(null);
   const navigate = useNavigate();
 
-  // const handleChange = (e) => {
-  //   const { name, value, type } = e.target;
-  //   if (type === "file") {
-  //     if (fileType !== "image/jpeg" && fileType !== "image/png") {
-  //       alert("Please select a JPEG or PNG image.");
-  //       e.target.value = "";
-  //     }
-  //     setFormData({ ...formData, image: e.target.files[0] });
-  //   } else {
-  //     setFormData({ ...formData, [name]: value });
-  //   }
-  // };
   const handleChange = (e) => {
     const { name, type, value } = e.target;
 
@@ -64,10 +52,10 @@ const CreateEmployee = () => {
         if (fileType !== "image/jpeg" && fileType !== "image/png") {
           alert("Please select a JPEG or PNG image.");
           e.target.value = "";
-          return; // Exit if the file type is invalid
+          return;
         }
 
-        setFormData({ ...formData, image: file }); // Set the valid image
+        setFormData({ ...formData, image: file });
       }
     } else {
       setFormData({ ...formData, [name]: value });
@@ -88,7 +76,7 @@ const CreateEmployee = () => {
       submissionData.append("image", formData.image);
 
       const response = await axios.post(
-        `http://localhost:4000/employees/create-employee`,
+        `https://interview-task-be.onrender.com/employees/create-employee`,
         submissionData,
         {
           headers: {

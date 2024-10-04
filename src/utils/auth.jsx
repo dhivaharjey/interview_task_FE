@@ -19,7 +19,7 @@ const ProtectedRoute = ({ element }) => {
 
     try {
       const response = await axios.get(
-        "http://localhost:4000/user/check-auth",
+        "https://interview-task-be.onrender.com/user/check-auth",
         {
           headers: {
             Authorization: `Bearer ${token}`, // Include token in the headers
